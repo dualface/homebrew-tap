@@ -1,24 +1,32 @@
 class Ullage < Formula
   desc "Local daemon and CLI for Claude, ChatGPT, Grok, and Cursor subscription usage"
   homepage "https://github.com/dualface/ullage-cli"
-  url "https://github.com/dualface/ullage-cli.git",
-      tag:      "v0.1.0",
-      revision: "fbd378fe2e4edf94d7ce8310969c65ca69d1a2a8"
+  version "0.1.0"
   license "MIT"
-  head "https://github.com/dualface/ullage-cli.git", branch: "main"
 
-  depends_on "rust" => :build
+  on_macos do
+    on_arm do
+      url "https://github.com/dualface/ullage-cli/releases/download/v0.1.0/ullage-aarch64-apple-darwin.tar.gz"
+      sha256 "b5bc9d58d7299bbfdb685c1e88742771fceb2ad6ba08eaea2054d2f9e1df8ce7"
+    end
+    on_intel do
+      url "https://github.com/dualface/ullage-cli/releases/download/v0.1.0/ullage-x86_64-apple-darwin.tar.gz"
+      sha256 "e796ba1f69bcf52f2da95a342f606ea90e27b662ecf9ab88fb2041a5135ad9d1"
+    end
+  end
 
   on_linux do
-    depends_on "pkgconf" => :build
-    depends_on "dbus"
+    on_intel do
+      url "https://github.com/dualface/ullage-cli/releases/download/v0.1.0/ullage-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "90143062a0f0c520187fdf736f93d80a9ccc7024ede730c0afda36e0a3666b8a"
+    end
   end
 
   def install
-    system "cargo", "install", *std_cargo_args(path: "crates/ullage-cli")
+    bin.install "ullage"
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/ullage --version")
+    assert_equal "ullage 0.1.0", shell_output("#{bin}/ullage --version").strip
   end
 end

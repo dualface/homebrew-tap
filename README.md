@@ -17,5 +17,5 @@ brew install dualface/tap/ullage
 `Formula/kander.rb` is regenerated automatically by the release workflow in the
 upstream repository; do not hand-edit the `version` and `sha256` fields.
 
-`Formula/ullage.rb` builds from the tagged Git source with Rust. The command
-it installs is `ullage`.
+`Formula/ullage.rb` installs the prebuilt `ullage` binary from GitHub Releases.
+Update `version`, `url`, and `sha256` when cutting a new tag.

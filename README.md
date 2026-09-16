@@ -9,8 +9,8 @@ brew install dualface/tap/ullage
 ```
 
 Linux needs [Homebrew on Linux](https://docs.brew.sh/Homebrew-on-Linux)
-first. After `brew upgrade ullage`, run `ullage daemon install` again so the
-user-level service pins the new Cellar keg path.
+first. `brew install ullage` and `brew upgrade ullage` install and start
+the user-level daemon, pinning the current Cellar keg path.
 
 ## Formulae
 

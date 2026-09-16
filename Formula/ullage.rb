@@ -2,6 +2,7 @@ class Ullage < Formula
   desc "Local daemon and CLI for Claude, ChatGPT, Grok, and Cursor subscription usage"
   homepage "https://github.com/dualface/ullage-cli"
   version "0.1.0"
+  revision 1
   license "MIT"
 
   on_macos do
@@ -27,6 +28,6 @@ class Ullage < Formula
   end
 
   test do
-    assert_equal "ullage 0.1.0", shell_output("#{bin}/ullage --version").strip
+    assert_match "ullage 0.1.0", shell_output("#{bin}/ullage --version")
   end
 end

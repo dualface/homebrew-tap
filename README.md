@@ -1,11 +1,16 @@
 # homebrew-tap
 
-Homebrew tap for [dualface](https://github.com/dualface)'s tools.
+Homebrew tap for [dualface](https://github.com/dualface)'s tools. The same
+formulae work on macOS and Linux (Homebrew on Linux).
 
 ```sh
 brew install dualface/tap/kander
 brew install dualface/tap/ullage
 ```
+
+Linux needs [Homebrew on Linux](https://docs.brew.sh/Homebrew-on-Linux)
+first. After `brew upgrade ullage`, run `ullage daemon install` again so the
+user-level service pins the new Cellar keg path.
 
 ## Formulae
 
@@ -14,8 +19,6 @@ brew install dualface/tap/ullage
 | `kander` | [dualface/kander](https://github.com/dualface/kander) — kanban orchestration for multiple AI agents |
 | `ullage` | [dualface/ullage-cli](https://github.com/dualface/ullage-cli) — local daemon and CLI for subscription usage |
 
-`Formula/kander.rb` is regenerated automatically by the release workflow in the
-upstream repository; do not hand-edit the `version` and `sha256` fields.
-
-`Formula/ullage.rb` installs the prebuilt `ullage` binary from GitHub Releases.
-Update `version`, `url`, and `sha256` when cutting a new tag.
+`Formula/kander.rb` and `Formula/ullage.rb` are regenerated automatically by
+the release workflow in the upstream repository; do not hand-edit the
+`version` and `sha256` fields.

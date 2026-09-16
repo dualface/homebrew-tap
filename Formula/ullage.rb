@@ -27,7 +27,14 @@ class Ullage < Formula
     bin.install "ullage"
   end
 
+  def caveats
+    <<~EOS
+      After `brew upgrade`, run `ullage daemon install` again so the user-level
+      service pins the new Cellar keg path.
+    EOS
+  end
+
   test do
-    assert_match "ullage 0.1.0", shell_output("#{bin}/ullage --version")
+    assert_match "ullage #{version}", shell_output("#{bin}/ullage --version")
   end
 end

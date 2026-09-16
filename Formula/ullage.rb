@@ -1,28 +1,28 @@
 class Ullage < Formula
   desc "Local daemon and CLI for Claude, ChatGPT, Grok, and Cursor subscription usage"
   homepage "https://github.com/dualface/ullage-cli"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/dualface/ullage-cli/releases/download/v0.1.2/ullage-aarch64-apple-darwin.tar.gz"
-      sha256 "dd6abe1de228945a23d155a609f6ab64f0448c80b229c405421c980f5f3037b5"
+      url "https://github.com/dualface/ullage-cli/releases/download/v0.1.3/ullage-aarch64-apple-darwin.tar.gz"
+      sha256 "12027edee33a1adf1dc40bb9eb5e287c18e655d2ef5d92a414481755a287b6ff"
     end
     on_intel do
-      url "https://github.com/dualface/ullage-cli/releases/download/v0.1.2/ullage-x86_64-apple-darwin.tar.gz"
-      sha256 "ba1c3a37c6d7384c20c2c75173d6dcd2dd16f5aa06086b78aef2ee83fa0a6161"
+      url "https://github.com/dualface/ullage-cli/releases/download/v0.1.3/ullage-x86_64-apple-darwin.tar.gz"
+      sha256 "3784b717fd3c06ac52559fbcfe5a21cbcaeacb2e29e069b6062b2bb8f98861a0"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/dualface/ullage-cli/releases/download/v0.1.2/ullage-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "900a09455360c05d03dbc38db77212086ed53583a597306cf78928314e409bf9"
+      url "https://github.com/dualface/ullage-cli/releases/download/v0.1.3/ullage-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "25b5e59dabc51e796cd7766d47638eb2ba4dc2b0d8776d468f4353a46a2d3059"
     end
     on_intel do
-      url "https://github.com/dualface/ullage-cli/releases/download/v0.1.2/ullage-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "e8a874ffd468b6e04bda6c2a4187cf3024d28f0f19fa2cdc9f3f008407fb1ed4"
+      url "https://github.com/dualface/ullage-cli/releases/download/v0.1.3/ullage-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "728b6b3f5f5735d5cf8017451f02e2dfbea39bd2921d1195362d561cef961ccb"
     end
   end
 

@@ -1,28 +1,28 @@
 class Ullage < Formula
   desc "Local daemon and CLI for AI subscription usage"
   homepage "https://github.com/dualface/ullage-cli"
-  version "0.1.8"
+  version "0.1.9"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/dualface/ullage-cli/releases/download/v0.1.8/ullage-aarch64-apple-darwin.tar.gz"
-      sha256 "5ad100812d13aed8c8f0f1a0402404c6e0bd3be18cacc599aae909c1f0e01565"
+      url "https://github.com/dualface/ullage-cli/releases/download/v0.1.9/ullage-aarch64-apple-darwin.tar.gz"
+      sha256 "79c62405fa8a3a40cbb969ac7c98ee4e4bb0502e2927211031d66e19eeb7fe79"
     end
     on_intel do
-      url "https://github.com/dualface/ullage-cli/releases/download/v0.1.8/ullage-x86_64-apple-darwin.tar.gz"
-      sha256 "140c164823cd43aa475672fcb3f530ea9f7e51c617fd23cc7fe3afff37054a8f"
+      url "https://github.com/dualface/ullage-cli/releases/download/v0.1.9/ullage-x86_64-apple-darwin.tar.gz"
+      sha256 "626eebfab267362548bf85f9041038bb1239bc69a32c7b914b4e16bb913908b1"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/dualface/ullage-cli/releases/download/v0.1.8/ullage-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "2fe60c7f2170bbba0d3f4b608fead537482ccfc560bbd7a916671d7a8f493bd8"
+      url "https://github.com/dualface/ullage-cli/releases/download/v0.1.9/ullage-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "2e2a7c50a510f2fbfe77458582c3a6cee573442e67f7692f13ccd6ea0db72217"
     end
     on_intel do
-      url "https://github.com/dualface/ullage-cli/releases/download/v0.1.8/ullage-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "8e7b6592cfe6b3f255e5ff51838fea0cd591805372eb17c8aaa02babf7523a23"
+      url "https://github.com/dualface/ullage-cli/releases/download/v0.1.9/ullage-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "c54d38e5de72525659996556b5b6f727afa451226523b2ef29cc0f37b2af8ab3"
     end
   end
 
@@ -36,7 +36,7 @@ class Ullage < Formula
     ohai "Installing and starting the Ullage user daemon"
     quiet_system bin/"ullage", "daemon", "stop"
     unless quiet_system bin/"ullage", "daemon", "install"
-      opoo "Could not install the user daemon. Run: ullage daemon install && ullage daemon start"
+      opoo "Could not install the user daemon. Run: ullage daemon install"
       return
     end
     return if quiet_system bin/"ullage", "daemon", "start"
@@ -50,7 +50,6 @@ class Ullage < Formula
       After an upgrade they pin the new Cellar keg path. If that step was
       skipped, run:
         ullage daemon install
-        ullage daemon start
     EOS
   end
 

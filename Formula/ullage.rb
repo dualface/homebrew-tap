@@ -1,4 +1,5 @@
 class Ullage < Formula
+  # temporary marker: verifying the release workflow can push to the tap
   desc "Local daemon and CLI for AI subscription usage"
   homepage "https://github.com/dualface/ullage-cli"
   version "0.3.0"

@@ -1,28 +1,28 @@
 class Ullage < Formula
   desc "Local daemon and CLI for AI subscription usage"
   homepage "https://github.com/dualface/ullage-cli"
-  version "0.3.0"
+  version "0.3.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/dualface/ullage-cli/releases/download/v0.3.0/ullage-aarch64-apple-darwin.tar.gz"
-      sha256 "99e86249765cc269c5839a914867991d16eca4def4a62f2340033dd99d68ba77"
+      url "https://github.com/dualface/ullage-cli/releases/download/v0.3.1/ullage-aarch64-apple-darwin.tar.gz"
+      sha256 "c37342a1ee365353a4b151e87c871147efbde00d72de5d9be6be9917a4df95d3"
     end
     on_intel do
-      url "https://github.com/dualface/ullage-cli/releases/download/v0.3.0/ullage-x86_64-apple-darwin.tar.gz"
-      sha256 "885cec8adaf66487adfc7e8b9fd45c773a080732885304c6c2a8cd51f71afeef"
+      url "https://github.com/dualface/ullage-cli/releases/download/v0.3.1/ullage-x86_64-apple-darwin.tar.gz"
+      sha256 "1b7a8c76cd1e75ea892f583f7faa2827c34d1ac4fc2fd6aafd4ce2566cd0401e"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/dualface/ullage-cli/releases/download/v0.3.0/ullage-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "c5d6dd4c116de4deb595e8028d5e3672dd1d93766ce5f2d5d6262bd10ba26da9"
+      url "https://github.com/dualface/ullage-cli/releases/download/v0.3.1/ullage-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "5bd356340cbf24c134521d89986aeab058f511af2b7f4e33c16fcbc125b4c495"
     end
     on_intel do
-      url "https://github.com/dualface/ullage-cli/releases/download/v0.3.0/ullage-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "527e96a3b8003fc21f82b2944590f11fbb2ae781fdddcc8e3ddf8f6c6f4701bf"
+      url "https://github.com/dualface/ullage-cli/releases/download/v0.3.1/ullage-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "e5a42a3b00cc9b540741e87f6b8a6d20ee29e9af5f7ef7d536f7f4a08148167c"
     end
   end
 

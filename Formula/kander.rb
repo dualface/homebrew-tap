@@ -1,28 +1,28 @@
 class Kander < Formula
   desc "Kanban orchestration for multiple AI agents"
   homepage "https://github.com/dualface/kander"
-  version "1.3.0"
+  version "1.4.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/dualface/kander/releases/download/v1.3.0/kander-darwin-arm64.tar.gz"
-      sha256 "c3985d5df16c65ea34cd09038c0a8af7057cf33c904609a1622713bc887f0256"
+      url "https://github.com/dualface/kander/releases/download/v1.4.0/kander-darwin-arm64.tar.gz"
+      sha256 "4aa9142fa77c95204280927761a75a20f764f652442dc4439178e1ccd665518a"
     end
     on_intel do
-      url "https://github.com/dualface/kander/releases/download/v1.3.0/kander-darwin-amd64.tar.gz"
-      sha256 "57f9e83a308869345a7ce6926606d9f54a60e66685e3a167fbc6b56ef86d967a"
+      url "https://github.com/dualface/kander/releases/download/v1.4.0/kander-darwin-amd64.tar.gz"
+      sha256 "8e570cffed6fdb3a753505c87d75fa9cc26e77b154b4bd3a96a6a8487e5b0f7d"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/dualface/kander/releases/download/v1.3.0/kander-linux-arm64.tar.gz"
-      sha256 "7ea34d962e272875be66e473178eb4b576587858e74b1958681f8134390481f6"
+      url "https://github.com/dualface/kander/releases/download/v1.4.0/kander-linux-arm64.tar.gz"
+      sha256 "61af4d7c1faab948ffa7ec76fd86aa367ee6576506060f20cfa69bb5e2d21fb1"
     end
     on_intel do
-      url "https://github.com/dualface/kander/releases/download/v1.3.0/kander-linux-amd64.tar.gz"
-      sha256 "8a75c347152eee0aff0b66f74b94c17c2293e4c1ca3262b539c3d2d9a8b86e59"
+      url "https://github.com/dualface/kander/releases/download/v1.4.0/kander-linux-amd64.tar.gz"
+      sha256 "bfd13359f21bd325872a5744b5a50ff7d0f6b91d1d09b055b0c924067d498bde"
     end
   end
 
@@ -31,6 +31,6 @@ class Kander < Formula
   end
 
   test do
-    assert_equal "kander 1.3.0", shell_output("#{bin}/kander version").strip
+    assert_equal "kander 1.4.0", shell_output("#{bin}/kander version").strip
   end
 end
